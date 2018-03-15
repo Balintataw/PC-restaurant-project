@@ -1,5 +1,4 @@
 body {
-    /* border: 1px solid white;  */
     background-color: black;
     color: #FFF;
 }
@@ -106,4 +105,48 @@ header {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     height: 181px;
+}
+
+/* menu stuff */
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menuspec {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menuapps {
+    display: flex;
+    /* width: 75%; */
+}
+
+.appsleft, .entreeleft, .sidesleft {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    width: 75%;
+    
+}
+
+.apptitle {
+    display: flex;
+    justify-content: center;
+}
+
+.menutitle {
+    font-weight: bold;
+}
+
+.price {
+    color: silver;
 }

@@ -17,7 +17,7 @@ $(document).ready(function() {
         slides[slideIndex-1].style.display = "block";  
         // setTimeout(showSlides, 3000); 
     }
-
+    // news section
     $.get("https://json-data.herokuapp.com/restaurant/news/1", function(data){
         var news = `
         <div id="news">
@@ -27,5 +27,40 @@ $(document).ready(function() {
             </div>
             `
             $(".news").append(news)
+    })
+    $.get("https://json-data.herokuapp.com/restaurant/menu/1", function(data){
+        $.each(data.appetizers, function(i,item) {
+            console.log(item)
+            var apps = `
+        <span class="menutitle">${data.appetizers[i].item}</span>
+            <p class="desc">${data.appetizers[i].description}</p>
+            <span class="price">${data.appetizers[i].price}</span>
+            </div>
+        `
+        $(".appsleft").append(apps)
+        })
+        $.each(data.entrees, function(i,item) {
+            console.log(item)
+            var apps = `
+        <span class="menutitle">${data.entrees[i].item}</span>
+            <p class="desc">${data.entrees[i].description}</p>
+            <span class="price">${data.entrees[i].price}</span>
+            </div>
+        `
+        $(".entreeleft").append(apps)
+        })
+        $.each(data.sides, function(i,item) {
+            console.log(item)
+            var apps = `
+        <span class="menutitle">${data.sides[i].item}</span>
+            <p class="desc">${data.sides[i].description}</p>
+            <span class="price">${data.sides[i].price}</span>
+            </div>
+        `
+        $(".sidesleft").append(apps)
+        })
+
+
+
     })
 })
