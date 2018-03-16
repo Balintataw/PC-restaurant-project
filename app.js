@@ -22,6 +22,8 @@ $(document).ready(function() {
             `
             $(".news").append(news)
     })
+
+    // menu section
     $.get("https://json-data.herokuapp.com/restaurant/menu/1", function(data){
         $.each(data.appetizers, function(i,item) {
             console.log(item)
