@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     // carousel 
-
     $(function(){   
     $('.fadein img:gt(0)').hide();
     setInterval(function(){
@@ -103,6 +102,12 @@ $(document).ready(function() {
             $active.addClass('active');
             $content.show();
         })
+    });
+
+    //change background color of tabs on selected
+    $('.tabs a').click(function (event) {
+        $('.tabs a').removeClass('selected');
+        $(event.currentTarget).addClass('selected');
     });
 
 })

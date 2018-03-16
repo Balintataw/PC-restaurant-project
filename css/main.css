@@ -79,15 +79,15 @@ header {
     border: 3px solid rgb(177, 3, 3);
     border-left: transparent;
     border-right: transparent;
-    height: 300px;
+    /* height: 300px; */
     width: 100%;
 }
 
 #about, #news, #realmap {
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 30px;
+    /* padding-right: 30px; */
     width: 500px;
 }
 
@@ -100,8 +100,7 @@ header {
 .newsTitle, .us, .map1 {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-
+    /* padding-top: 10px; */
 }
 
 .title {
@@ -158,9 +157,15 @@ header {
     align-items: center;
 }
 
-#tab1, #tab2, #tab3, #tab4 {
+#specials, #appetizers, #entrees, #aLaCarte {
     display: flex;
-   
+    background-color: rgba(192, 192, 192, 0.3);
+}
+
+.selected {
+    background-color: rgba(192, 192, 192, 0.3);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .menu-left {
