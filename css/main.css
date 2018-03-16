@@ -132,26 +132,35 @@ header {
     flex-direction: column;
 }
 
-.menu {
+.menu-title-header {
     display: flex;
     justify-content: center;
-    font-size: 25px;
+    /* font-size: 25px; */
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    height: 85px;
+    line-height: 85px;
 }
 
 .tabs {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-/* #tab1 {
-    display: flex;
+.tabs a {
+    display:  flex;
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Good Vibes', cursive;
+    font-size: 30px;
+    padding: 15px;
     align-items: center;
-    flex-direction: column;
-} */
+}
 
 #tab1, #tab2, #tab3, #tab4 {
     display: flex;
-    width: 75%;
+   
 }
 
 .menu-left {
@@ -161,15 +170,17 @@ header {
     width: 75%;
 }
 
-/* .apptitle {
-    display: flex;
-    justify-content: center;
-} */
-
-.menutitle {
+.menu-item-title {
+    padding: 15px;
+    font-size: 20;
     font-weight: bold;
+}
+
+.desc {
+    text-align: center;
 }
 
 .price {
     color: silver;
+    padding: 15px;
 }

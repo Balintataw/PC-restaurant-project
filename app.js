@@ -32,7 +32,7 @@ $(document).ready(function() {
                 $.each(items, function(j, item) {
                     if (item.id === specialID) {
                         var special = `
-                        <span class="menutitle">${item.item}</span>
+                        <span class="menu-item-title">${item.item}</span>
                         <p class="desc">${item.description}</p>
                         <span class="price">${item.price}</span>
                         </div>
@@ -48,7 +48,7 @@ $(document).ready(function() {
     $.get("https://json-data.herokuapp.com/restaurant/menu/1", function(data){
         $.each(data.appetizers, function(i,item) {
             var apps = `
-        <span class="menutitle">${data.appetizers[i].item}</span>
+        <span class="menu-item-title">${data.appetizers[i].item}</span>
             <p class="desc">${data.appetizers[i].description}</p>
             <span class="price">${data.appetizers[i].price}</span>
             </div>
@@ -57,7 +57,7 @@ $(document).ready(function() {
         })
         $.each(data.entrees, function(i,item) {
             var apps = `
-        <span class="menutitle">${data.entrees[i].item}</span>
+        <span class="menu-item-title">${data.entrees[i].item}</span>
             <p class="desc">${data.entrees[i].description}</p>
             <span class="price">${data.entrees[i].price}</span>
             </div>
@@ -66,7 +66,7 @@ $(document).ready(function() {
         })
         $.each(data.sides, function(i,item) {
             var apps = `
-        <span class="menutitle">${data.sides[i].item}</span>
+        <span class="menu-item-title">${data.sides[i].item}</span>
             <p class="desc">${data.sides[i].description}</p>
             <span class="price">${data.sides[i].price}</span>
             </div>
