@@ -75,33 +75,40 @@ header {
 .container1 {
     display: flex;
     font-size: 30px;
-    justify-content: center;
-    border: 3px solid rgb(177, 3, 3);
-    border-left: transparent;
-    border-right: transparent;
-    /* height: 300px; */
+    justify-content: space-around;
+    border-bottom: 3px solid rgb(177, 3, 3);
     width: 100%;
 }
 
-#about, #news, #realmap {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    /* padding-right: 30px; */
-    width: 500px;
+.about, .news {
+    width: 30%;
+    padding: 20px;
 }
 
-#news, .newsTitle {
-    border:1px solid silver;
-    border-bottom-color: transparent;
-    border-top-color: transparent;
+.maps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.news {
+    border-left: 1px solid rgba(192, 192, 192, 0.3);
+    border-right: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+#realmap {
+    width: 100%;
 }
 
 .newsTitle, .us, .map1 {
     display: flex;
     justify-content: center;
-    /* padding-top: 10px; */
-}
+    padding: 10px 0 20px 0;
+    font-family: 'Good Vibes', cursive;
+} 
+
 
 .title {
     padding: 10px 0;
