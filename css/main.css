@@ -44,6 +44,10 @@ header {
     height: 40px;
 }
 
+.sociallinks {
+    text-decoration: none;
+}
+
 /* carousel content */
 
 .jumbotron {
