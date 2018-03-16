@@ -5,12 +5,14 @@
 * <del>create skeletal structure</del>
 * <del>create a tab for each menu service</del>
 * <del>add google maps location</del>
-* add open table reservation function
+* <del>add open table reservation function</del>
+* adusjt title spacing for location section
 * create history content
-* create reviews with disqus
+* <del>create reviews with disqus</del>
 * <del>push to surge<del>
 * <del>menu tabs are defaulting to last open tab<del>
-* incorporate open table
-* implement special cases for menu items
+* <del>incorporate open table</del>
+* <del>implement special cases for menu items<del>
+* special case menu icons need an on hover info box reflecting the 0/1 value from api
   
 
