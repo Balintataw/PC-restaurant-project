@@ -179,6 +179,16 @@ header {
     padding: 30px 0;
 }
 
+.allergy, .favorite, .spicy, .vegan {
+    /* display:none; */
+    height: 16px;
+    width: 16px;
+}
+
+/* .show-icon {
+    display: block;
+} */
+
 .selected {
     background-color: rgba(192, 192, 192, 0.3);
     border-top-left-radius: 10px;
