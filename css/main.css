@@ -167,6 +167,9 @@ header {
 #specials, #appetizers, #entrees, #aLaCarte {
     display: flex;
     background-color: rgba(192, 192, 192, 0.3);
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
 }
 
 .selected {
@@ -179,12 +182,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items:  center;
-    width: 75%;
+    width: 60%;
+    padding: 0 20px;
 }
 
 .menu-item-title {
     padding: 15px;
-    font-size: 20;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -195,4 +199,10 @@ header {
 .price {
     color: silver;
     padding: 15px;
+}
+
+.menu-right img {
+    width: 300px;
+    padding-right: 50px;
+    border-radius: 5px;
 }
