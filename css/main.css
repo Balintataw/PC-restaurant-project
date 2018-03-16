@@ -37,7 +37,9 @@ header {
 }
 
 .social {
-    background-color: transparent;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social img {
@@ -46,6 +48,11 @@ header {
 
 .sociallinks {
     text-decoration: none;
+}
+
+.open-table img {
+    background-color: transparent;
+    height: 34px;
 }
 
 /* carousel content */
