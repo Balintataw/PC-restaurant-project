@@ -8,8 +8,9 @@
 * add open table reservation function
 * create history content
 * create reviews with disqus
-* push to surge
-* menu tabs are defaulting to last open tab
+* <del>push to surge<del>
+* <del>menu tabs are defaulting to last open tab<del>
 * incorporate open table
+* implement special cases for menu items
   
 
