@@ -1,9 +1,9 @@
 body {
-    background-color: black;
+    background: linear-gradient(to right, black , grey);
     color: #FFF;
 }
 div {
-    /* border:1px solid white;  */
+     /*border:1px solid white;  */
 }
 /* header content */
 
@@ -37,11 +37,15 @@ header {
 }
 
 .social {
-    background-color: grey;
+    background-color: transparent;
 }
 
 .social img {
     height: 40px;
+}
+
+.sociallinks {
+    text-decoration: none;
 }
 
 /* carousel content */
@@ -79,7 +83,7 @@ header {
     width: 100%;
 }
 
-#about, #news {
+#about, #news, #realmap {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
@@ -87,7 +91,13 @@ header {
     width: 500px;
 }
 
-.newsTitle, .us {
+#news, .newsTitle {
+    border:1px solid silver;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+}
+
+.newsTitle, .us, .map1 {
     display: flex;
     justify-content: center;
     padding-top: 10px;

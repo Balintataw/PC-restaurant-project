@@ -22,6 +22,7 @@ $(document).ready(function() {
             `
             $(".news").append(news)
     })
+
     
     //gets and sets special data
     $.get("https://json-data.herokuapp.com/restaurant/special/1", function(data) {
