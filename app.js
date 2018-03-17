@@ -35,10 +35,12 @@ $(document).ready(function() {
                         <p class="desc">${item.description}</p>
                         <span class="price">${item.price}</span>
                         <div="special-cases">
-                        <img src="./resources/allergy.png" class="allergy" />
-                        <img src="./resources/favorite.png" class="favorite" />
-                        <img src="./resources/spicy.png" class="spicy" />
-                        <img src="./resources/vegan.png" class="vegan" />
+                        <span class="ico-tip-text">Bollocks!</span>
+                        
+                        <img src="./resources/favorite.png" class="ico favorite" />
+                        <img src="./resources/allergy.png" class="ico allergy" />
+                        <img src="./resources/spicy.png" class="ico spicy" />
+                        <img src="./resources/vegan.png" class="ico vegan" />
                         </div>
                         </div>
                         `
@@ -48,52 +50,57 @@ $(document).ready(function() {
             })
         })
     })
-
+    //gets and sets menu items
     $.get("https://json-data.herokuapp.com/restaurant/menu/1", function(data){
         $.each(data.appetizers, function(i,itemObj) {
-            console.log(itemObj)
             var apps = `
                 <span class="menu-item-title">${itemObj.item}</span>
                 <p class="desc">${itemObj.description}</p>
                 <span class="price">${itemObj.price}</span>
                 <div="special-cases">
-                <img src="./resources/allergy.png" class="allergy" />
-                <img src="./resources/favorite.png" class="favorite" />
-                <img src="./resources/spicy.png" class="spicy" />
-                <img src="./resources/vegan.png" class="vegan" />
+                <span class="ico-tip-text">Bollocks!</span>
+                
+                <img src="./resources/favorite.png" class="ico favorite" />
+                <img src="./resources/allergy.png" class="ico allergy" />
+                <img src="./resources/spicy.png" class="ico spicy" />
+                <img src="./resources/vegan.png" class="ico vegan" />
                 </div>
                 </div>
-            `
+                `
         $(".menu-apps").append(apps)
         })
-        $.each(data.entrees, function(i,item) {
+        $.each(data.entrees, function(i,itemObj) {
             var apps = `
-        <span class="menu-item-title">${data.entrees[i].item}</span>
-            <p class="desc">${data.entrees[i].description}</p>
-            <span class="price">${data.entrees[i].price}</span>
-            <div="special-cases">
-            <img src="./resources/allergy.png" class="allergy" />
-            <img src="./resources/favorite.png" class="favorite" />
-            <img src="./resources/spicy.png" class="spicy" />
-            <img src="./resources/vegan.png" class="vegan" />
-            </div>
-            </div>
-        `
+                <span class="menu-item-title">${itemObj.item}</span>
+                <p class="desc">${itemObj.description}</p>
+                <span class="price">${itemObj.price}</span>
+                <div class="special-cases">
+                <span class="ico-tip-text">Bollocks!</span>
+
+                <img src="./resources/favorite.png" class="favorite ico" />
+                <img src="./resources/allergy.png" class="allergy ico" />
+                <img src="./resources/spicy.png" class="spicy ico" />
+                <img src="./resources/vegan.png" class="vegan ico" />
+                </div>
+                </div>
+                `
         $(".menu-entrees").append(apps)
         })
-        $.each(data.sides, function(i,item) {
+        $.each(data.sides, function(i,itemObj) {
             var apps = `
-        <span class="menu-item-title">${data.sides[i].item}</span>
-            <p class="desc">${data.sides[i].description}</p>
-            <span class="price">${data.sides[i].price}</span>
-            <div="special-cases">
-            <img src="./resources/allergy.png" class="allergy" />
-            <img src="./resources/favorite.png" class="favorite" />
-            <img src="./resources/spicy.png" class="spicy" />
-            <img src="./resources/vegan.png" class="vegan" />
-            </div>
-            </div>
-        `
+                <span class="menu-item-title">${itemObj.item}</span>
+                <p class="desc">${itemObj.description}</p>
+                <span class="price">${itemObj.price}</span>
+                <div class="special-cases">
+                <span class="ico-tip-text">Bollocks!</span>
+                
+                <img src="./resources/favorite.png" class="favorite ico" />
+                <img src="./resources/allergy.png" class="allergy ico" />
+                <img src="./resources/spicy.png" class="spicy ico" />
+                <img src="./resources/vegan.png" class="vegan ico" />
+                </div>
+                </div>
+                `
         $(".menu-sides").append(apps)
         })
     });
@@ -131,7 +138,17 @@ $(document).ready(function() {
     //change background color of tabs on selected
     $('.tabs a').click(function (event) {
         $('.tabs a').removeClass('selected');
-        $(event.currentTarget).addClass('selected');
+        $(this).addClass('selected');
     });
 
+    // //hover events for special case icons
+    // var hoverIn = function() {
+    //     console.log('yes')
+    //     $(this).hide();
+    // };
+    // var hoverOut = function() {
+    //     console.log('no')
+    // };
+    
+    // $('.ico').hover(hoverIn, hoverOut);
 })
