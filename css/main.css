@@ -1,6 +1,7 @@
 body {
     background: linear-gradient(to right, black , grey);
     color: #FFF;
+    font-family: 'EB Garamond', serif;
 }
 div {
      /*border:1px solid white;  */
@@ -122,12 +123,14 @@ header {
     text-align:  center;
     font-size: 20px;
     font-weight: bold;
+    font-family: 'EB Garamond', serif;
 }
 
 .date {
     font-size: 15px;
     color: silver;
     padding: 10px 0;
+    font-family: 'EB Garamond', serif;
 }
 
 .post {
@@ -135,7 +138,8 @@ header {
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    height: 242px;
+    height: 244px;
+    font-family: 'EB Garamond', serif;
 }
 
 .origin-story {
@@ -144,6 +148,7 @@ header {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     height: 242px;
+    font-family: 'EB Garamond', serif;
 }
 
 
@@ -222,10 +227,12 @@ header {
     padding: 15px;
     font-size: 20px;
     font-weight: bold;
+    font-family: 'EB Garamond', serif;
 }
 
 .desc {
     text-align: center;
+    font-family: 'EB Garamond', serif;
 }
 
 .price {
