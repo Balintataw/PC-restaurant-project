@@ -14,5 +14,8 @@
 * <del>incorporate open table</del>
 * <del>implement special cases for menu items<del>
 * special case menu icons need an on hover info box reflecting the 0/1 value from api
+* make food images zoom on hover
+* create footer section
+* find a sweet font for the text
   
 
