@@ -143,6 +143,7 @@ header {
 .tabs-container {
     display: flex;
     flex-direction: column;
+    min-height: 600px;
 }
 
 .menu-title-header {
@@ -174,9 +175,10 @@ header {
 #specials, #appetizers, #entrees, #aLaCarte {
     display: flex;
     background-color: rgba(192, 192, 192, 0.3);
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-around;
     padding: 30px 0;
+    min-height: 600px;
 }
 
 .allergy, .favorite, .spicy, .vegan {
@@ -203,6 +205,10 @@ header {
     padding: 0 20px;
 }
 
+.menu-right {
+    width: 300px;
+}
+
 .menu-item-title {
     padding: 15px;
     font-size: 20px;
@@ -219,10 +225,13 @@ header {
 }
 
 .menu-right img {
-    width: 300px;
-    padding-right: 50px;
+    height: 150px;
+    width: 150px;
+    /* padding-right: 50px; */
     border-radius: 5px;
 }
+
+/* special case tooltips */
 
 .special-cases {
     display: flex;
@@ -231,9 +240,12 @@ header {
 .ico-tip-text {
     visibility: hidden;
     cursor: pointer;
-    width: 120px;
-    background-color: rgba(114, 48, 48, 0.6);
+    display: flex;
+    align-items: center;
+    width: 200px;
+    line-height: 50px;
     color: #fff;
+    background-color: rgba(114, 48, 48, 0.8);
     text-align: center;
     border-radius: 6px;
     padding: 10px 10px;
@@ -243,7 +255,7 @@ header {
     left: 50%;
     margin-left: -60px;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.5s;
 }
 
 .ico-tip-text::after {
@@ -252,12 +264,13 @@ header {
     margin-left: -5px;
     top: 100%;
     left: 50%;
-    /* border: ; */
+    opacity: 1;
 }
 
 .case {
     position: relative;
     display: inline-block;
+    padding: 0 7px;
 }
 
 .case:hover .ico-tip-text {
