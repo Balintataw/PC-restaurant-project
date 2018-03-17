@@ -12,7 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    padding: 20px;
+    padding: 20px 60px;
     border-bottom: 3px solid rgb(177, 3, 3);
 }
 
@@ -87,15 +87,15 @@ header {
     width: 100%;
 }
 
-.about, .news {
+.about, .news, .maps {
     width: 30%;
-    padding: 20px;
+    padding: 25px;
 }
 
 .maps {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width: 30%;
 }
@@ -107,6 +107,7 @@ header {
 
 #realmap {
     width: 100%;
+    margin-top: 25px;
 }
 
 .newsTitle, .us, .map1 {
@@ -114,6 +115,7 @@ header {
     justify-content: center;
     padding: 10px 0 20px 0;
     font-family: 'Good Vibes', cursive;
+    font-size: 40px;
 } 
 
 
@@ -130,20 +132,14 @@ header {
     padding: 10px 0;
 }
 
-.post {
+.origin-story, .post {
+    /* text-overflow: ellipsis; */
     overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    height: 242px;
-}
-
-.origin-story {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    height: 242px;
+    /* -webkit-line-clamp: 3; */
+    /* -webkit-box-orient: vertical; */
+    height: 237px;
+    font-size: 22px;
+    line-height: 1.5em;
 }
 
 
@@ -162,8 +158,9 @@ header {
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
-    height: 85px;
-    line-height: 85px;
+    height: 125px;
+    line-height: 125px;
+    /* margin-top: 20px; */
 }
 
 .tabs {
@@ -215,6 +212,10 @@ header {
 }
 
 .menu-right {
+    display:  flex;
+    flex-direction:  column;
+    align-items: center;
+    /* justify-content:  space-around; */
     width: 300px;
 }
 
@@ -233,11 +234,16 @@ header {
     padding: 15px;
 }
 
-.menu-right img {
-    height: 150px;
-    width: 150px;
-    /* padding-right: 50px; */
-    border-radius: 5px;
+.food-image, .food-image-right {
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+
+.menu-right img:nth-child(2n) {
+    margin-left: 100px;
 }
 
 /* special case tooltips */

@@ -180,14 +180,20 @@ $(document).ready(function() {
         $(".special-case-vegan").append(ve)
     }
 
-    //zooms image on hover 
-    $(".food-image").width(150);
-    $(".food-image").mouseover(function() {
-        $(this).css("cursor","pointer");
-        $(this).animate({width: "300px", height: "300px"}, 'slow');
+    //zooms image on click/hover 
+    $(".food-image").click(function() {
+        $(this).animate({width: "350px", height: "225px"}, {duration: 1000, queue: false});
     });
     
     $(".food-image").mouseout(function() {   
-        $(this).animate({width: "150px", height: "150px"}, 'slow');
+        $(this).animate({width: "100px", height: "100px"}, {duration: 1000, queue: false});
+    });
+    //animates right aligned images to animate towards the left
+    $(".right").click(function() {
+        $(this).animate({width: "350px", height: "225px", marginLeft: "0px"}, {duration: 1000, queue: false});
+    });
+
+    $(".right").mouseout(function() {   
+        $(this).animate({width: "100px", height: "100px", marginLeft: "100px"}, {duration: 1000, queue: false});
     });
 })
