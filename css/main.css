@@ -224,17 +224,19 @@ header {
     border-radius: 5px;
 }
 
-
+.special-cases {
+    display: flex;
+}
 
 .ico-tip-text {
     visibility: hidden;
     cursor: pointer;
     width: 120px;
-    background-color: #555;
+    background-color: rgba(114, 48, 48, 0.6);
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px 10px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -253,12 +255,12 @@ header {
     /* border: ; */
 }
 
-.special-cases {
+.case {
     position: relative;
     display: inline-block;
 }
 
-.special-cases:hover .ico-tip-text {
+.case:hover .ico-tip-text {
     visibility: visible;
     opacity: 1;
 }

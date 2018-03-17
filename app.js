@@ -34,18 +34,35 @@ $(document).ready(function() {
                         <span class="menu-item-title">${item.item}</span>
                         <p class="desc">${item.description}</p>
                         <span class="price">${item.price}</span>
-                        <div="special-cases">
-                        <span class="ico-tip-text">Bollocks!</span>
-                        
-                        <img src="./resources/favorite.png" class="ico favorite" />
-                        <img src="./resources/allergy.png" class="ico allergy" />
-                        <img src="./resources/spicy.png" class="ico spicy" />
-                        <img src="./resources/vegan.png" class="ico vegan" />
+                        <div class="special-cases">
+                        <div class="special-case-favorite case">
+                            <img src="./resources/favorite.png" class="ico favorite" />
+                        </div>
+                        <div class="special-case-allergy case">
+                            <img src="./resources/allergy.png" class="ico allergy" />
+                        </div>
+                        <div class="special-case-spicy case">
+                            <img src="./resources/spicy.png" class="ico spicy" />
+                        </div>
+                        <div class="special-case-vegan case">                        
+                            <img src="./resources/vegan.png" class="ico vegan" />
+                        </div>
                         </div>
                         </div>
                         `
                         $(".menu-special").append(special)
                     }
+                    console.log(item.allergies)
+                    
+                    var fa, al, sp, ve = '';
+                    item.favorite ? fa = `<span class="ico-tip-text">Kevins' favorite</span>` : fa =  `<span class="ico-tip-text">Lousy item</span>`
+                    item.allergies ? al = `<span class="ico-tip-text">Contains no known allergens</span>` : al = `<span class="ico-tip-text">May contain allergens</span>`
+                    item.spicy ? sp = `<span class="ico-tip-text">We'll make it as hot as you like</span>` : sp = `<span class="ico-tip-text">Not spicy</span>`
+                    item.vegan ? ve = `<span class="ico-tip-text">Vegan item</span>` : ve = `<span class="ico-tip-text">Not a vegan item</span>`
+                    $(".special-case-favorite").append(fa)
+                    $(".special-case-allergy").append(al)
+                    $(".special-case-spicy").append(sp)
+                    $(".special-case-vegan").append(ve)
                 })
             })
         })
@@ -57,13 +74,13 @@ $(document).ready(function() {
                 <span class="menu-item-title">${itemObj.item}</span>
                 <p class="desc">${itemObj.description}</p>
                 <span class="price">${itemObj.price}</span>
-                <div="special-cases">
+                <div class="special-cases">
                 <span class="ico-tip-text">Bollocks!</span>
                 
-                <img src="./resources/favorite.png" class="ico favorite" />
-                <img src="./resources/allergy.png" class="ico allergy" />
-                <img src="./resources/spicy.png" class="ico spicy" />
-                <img src="./resources/vegan.png" class="ico vegan" />
+                <img src="./resources/favorite.png" class="favorite ico" />
+                <img src="./resources/allergy.png" class="allergy ico" />
+                <img src="./resources/spicy.png" class="spicy ico" />
+                <img src="./resources/vegan.png" class="vegan ico" />
                 </div>
                 </div>
                 `
