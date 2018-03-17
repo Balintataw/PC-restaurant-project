@@ -15,7 +15,7 @@
 * <del>implement special cases for menu items<del>
 * <del>special case menu icons need an on hover info box reflecting the 0/1 value from api<del>
 * special case tooltips only appear if an exception is required / nothing appears otherwise and only appearing correctly on specials (first) section
-<del>* make food images zoom on hover</del>
+<del>make food images zoom on hover</del>
 * create footer section
 * find a sweet font for the text
 * add images for every dish
