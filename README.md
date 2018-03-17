@@ -7,7 +7,7 @@
 * <del>add google maps location</del>
 * <del>add open table reservation function</del>
 * adusjt title spacing for location section
-* create history content
+* <del>create history content</del>
 * <del>create reviews with disqus</del>
 * <del>push to surge<del>
 * <del>menu tabs are defaulting to last open tab<del>
