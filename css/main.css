@@ -135,8 +135,17 @@ header {
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    height: 181px;
+    height: 242px;
 }
+
+.origin-story {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 242px;
+}
+
 
 /* menu stuff */
 
