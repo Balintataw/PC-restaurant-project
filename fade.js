@@ -1,7 +1,5 @@
 $(document).ready(function() {
     (function($) {
-
-        
         $.fn.fade = function(options){   
             var settings = $.extend({
                 // These are the defaults.
@@ -20,20 +18,6 @@ $(document).ready(function() {
         }
     }(jQuery))
 })
-
-// html example:
-//
-// <div class="container">
-//     <img src="">
-//     <img src="">
-//     <img src="">    
-// </div>
-//
-// usage:
-//
-// $('.container').fade()
-
-
 
 
 
