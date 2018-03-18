@@ -1,14 +1,17 @@
 $(document).ready(function() {
 
     // carousel 
-    $(function(){   
-        $('.fadein img:gt(0)').hide();
-        setInterval(function(){
-        $('.fadein :first-child').fadeOut()
-            .next('img').fadeIn()
-            .end().appendTo('.fadein');
-        }, 4000);
-    });
+    // $(function(){   
+    //     $('.fadein img:gt(0)').hide();
+    //     setInterval(function(){
+    //     $('.fadein :first-child').fadeOut()
+    //         .next('img').fadeIn()
+    //         .end().appendTo('.fadein');
+    //     }, 4000);
+    // });
+
+    //carousel with my own plugin
+    $('.fadein').fade({delay:7000});
 
     // news section
     $.get("https://json-data.herokuapp.com/restaurant/news/1", function(data){
