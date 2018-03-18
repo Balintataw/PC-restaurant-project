@@ -371,14 +371,14 @@ div.enlarge {
 /* disqus */
 .bullcrap {
     padding: 30px;
+}
+
+/* trying to change disqus text color */
+/* #disqus_thread, #error, noscript {
     color: white;
 }
 
-#disqus_thread, #error, noscript {
-    color: white;
-}
-
-#dsq-content { color: #ffffff !important; }
+#dsq-content { color: #ffffff !important; } */
 
 /*footer stuff*/
 footer {
