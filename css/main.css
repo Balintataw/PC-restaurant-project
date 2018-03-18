@@ -371,7 +371,14 @@ div.enlarge {
 /* disqus */
 .bullcrap {
     padding: 30px;
+    color: white;
 }
+
+#disqus_thread, #error, noscript {
+    color: white;
+}
+
+#dsq-content { color: #ffffff !important; }
 
 /*footer stuff*/
 footer {
