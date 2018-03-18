@@ -373,6 +373,10 @@ div.enlarge {
     padding: 30px;
 }
 
+.post-message {
+    color: #FFF;
+}
+
 /* trying to change disqus text color */
 /* #disqus_thread, #error, noscript {
     color: white;
