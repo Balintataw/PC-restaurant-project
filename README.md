@@ -18,10 +18,11 @@
 * <del>create footer section</del>
 * <del>find a sweet font for the text</del>
 * <del>add images for every dish</del>
-* special case tooltips only appear if an exception is required / nothing appears otherwise and only appearing correctly on specials (first) section
+* <del>special case tooltips only appear if an exception is required / nothing appears otherwise and only appearing correctly on specials (first) section</del>
 * make carousel pausable or stop on mouse entry
 * add a "READ MORE" tab to news section
 * possibly add true ellipsis truncation to news section
 * add click to enlarge by images
+* <del>add copyright</del>
   
 
