@@ -24,7 +24,9 @@
 * <del>possibly add true ellipsis truncation to news section</del>
 * <del>add click to enlarge by images</del>
 * <del>add copyright</del>
-* media queries / responsive down to about 750px in portrait
+* media queries / currently responsive down to about 750px in portrait
 * <del>prevent tab anchors from jumping to their hash location<del>
+* <del>add reservation form</del>
+* remove click to enlarge from reservation form
   
 
