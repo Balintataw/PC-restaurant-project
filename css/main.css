@@ -311,6 +311,12 @@ div.enlarge {
     margin-bottom: 20px;
 }
 
+/* disqus */
+.bullcrap {
+    padding: 25px;
+    width: 50%;
+}
+
 /*footer stuff*/
 footer {
     display: flex;
@@ -333,4 +339,12 @@ footer {
 .contact-info a{
     text-decoration: none;
     color: white;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 930px) {
+    .nav {
+        display: none;
+    }
 }
