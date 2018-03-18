@@ -96,7 +96,6 @@ header {
 .maps {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     width: 30%;
 }
@@ -135,17 +134,22 @@ header {
     font-family: 'EB Garamond', serif;
 }
 
-.origin-story, .post {
-    /* text-overflow: ellipsis; */
+#news {
+    position: relative;
     overflow: hidden;
-    /* -webkit-line-clamp: 3; */
-    /* -webkit-box-orient: vertical; */
+}
+
+.origin-story, .post {
+    overflow-y: scroll;
     height: 237px;
     font-size: 22px;
     line-height: 1.5em;
     font-family: 'EB Garamond', serif;
+    text-indent: 1em;
 }
 
+/* questionable method of scrolling cleanly webkit browsers only */
+.post::-webkit-scrollbar, .origin-story::-webkit-scrollbar {display:none;}
 
 /* menu stuff */
 
@@ -183,14 +187,12 @@ header {
 #specials, #appetizers, #entrees, #aLaCarte {
     display: flex;
     background-color: rgba(192, 192, 192, 0.3);
-    /* align-items: center; */
     justify-content: space-around;
     padding: 30px 0;
     min-height: 600px;
 }
 
 .allergy, .favorite, .spicy, .vegan {
-    /* display:none; */
     height: 16px;
     width: 16px;
 }
@@ -300,7 +302,6 @@ header {
 div.enlarge {
     text-align: right;
     background-color: rgba(192, 192, 192, 0.3);
-    /* background: linear-gradient(to right, black , grey); */
 }
 
 .enlarge div {

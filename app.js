@@ -7,7 +7,7 @@ $(document).ready(function() {
         $('.fadein :first-child').fadeOut()
             .next('img').fadeIn()
             .end().appendTo('.fadein');
-        }, 3000);
+        }, 4000);
     });
 
     // news section
@@ -20,7 +20,18 @@ $(document).ready(function() {
             </div>
             `
             $(".news").append(news)
+            // //truncates .post text
+            // $('.post').succinct({
+            //     size: 260
+            // });
     })
+
+    //truncate news data
+    // $(function(){
+    //     $('.post').succinct({
+    //         size: 50
+    //     });
+    // });
 
     //sets vars for setCase() when creating menu template
     var fa, al, sp, ve = '';
@@ -176,6 +187,11 @@ $(document).ready(function() {
             $content.show();
         })
     });
+
+    //prevents tabs from jumping around on click
+    $(".prevent").click(function(e) {
+        e.preventDefault();
+      });
 
     //change background color of tabs on selected
     $('.tabs a').click(function (event) {
