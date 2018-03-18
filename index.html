@@ -20,6 +20,7 @@
             <ul class="nav-menu">
                 <li><a href="#Menu">Menu</a></li>
                 <li><a href="#about">Location</a></li>
+                <li><a href="#res-form">Reservations</a></li>
             </ul>
         </div>
         <div class="social">
@@ -77,6 +78,7 @@
             <li><a href="#appetizers" class="prevent">Appetizers</a></li>
             <li><a href="#entrees" class="prevent">Entrees</a></li>
             <li><a href="#aLaCarte" class="prevent">A La Carte</a></li>
+            <li><a href="#reservation" class="prevent">Reservations</a></li>
         </ul>
         <div id="specials">
             <div class="menu-left menu-special">
@@ -118,6 +120,25 @@
                 <img src="./resources/fingerlings.jpg"  class="food-image"/>
                 <img src="./resources/orzo.jpg"  class="food-image right"/>
             </div>
+        </div>
+        <div id="reservation">
+            <form action="index.html" id="res-form">
+                <label for="fullName">Full Name</label>
+                <input type="text" name="name" id="fullName" value="" placeholder="">
+                <label for="guestNum">Number of Guests</label>
+                <input type="text" name="guests" id="guestNum" value="" placeholder="">
+                <label for="resDate">Date</label>
+                <input type="text" name="resDate" id="resDate" value="" placeholder="">
+                <label for="spec-requests">Special Notes</label>
+                <textarea name="spec-requests" id="spec-requests"></textarea>
+                <label for="seating">Seating Preference</label>
+                <select name="seating" id="seating">
+                    <option value="op1">Indoor</option>
+                    <option value="op2">Patio</option>
+                    <option value="op3">Private party</option>
+                </select>
+                <button type="submit" id="reserve-button">Reserve Table</button>
+            </form>
         </div>
         <div class="enlarge">
             <div>[+] Click images to enlarge</div>

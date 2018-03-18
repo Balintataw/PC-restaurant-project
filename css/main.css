@@ -184,7 +184,7 @@ header {
     align-items: center;
 }
 
-#specials, #appetizers, #entrees, #aLaCarte {
+#specials, #appetizers, #entrees, #aLaCarte, #reservation {
     display: flex;
     background-color: rgba(192, 192, 192, 0.3);
     justify-content: space-around;
@@ -246,6 +246,59 @@ header {
 
 .menu-right img:nth-child(2n) {
     margin-left: 100px;
+}
+
+/* reservation form */
+
+#res-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+form label {
+    padding-bottom: 5px;
+}
+
+#res-form label {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+#res-form input {
+    height: 30px;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-size: 18px
+}
+
+#guestNum, #resDate {
+    width: 140px;
+}
+
+#spec-requests {
+    height: 180px;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+}
+
+#seating {
+    height: 30px;
+    width: 140px;
+    background: silver;
+}
+
+#reserve-button {
+    width: 140px;
+    height: 55px;
+    background-color: black;
+    color: white;
+    margin: 15px 0 0 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
 }
 
 /* special case tooltips */
