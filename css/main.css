@@ -270,7 +270,8 @@ form label {
     border-radius: 5px;
     background: transparent;
     color: white;
-    font-size: 18px
+    font-size: 18px;
+    outline: none;
 }
 
 #guestNum, #resDate {
@@ -282,12 +283,14 @@ form label {
     background: transparent;
     color: white;
     font-size: 18px;
+    outline: none;
 }
 
 #seating {
     height: 30px;
     width: 140px;
     background: silver;
+    outline: none;
 }
 
 #reserve-button {
@@ -299,6 +302,7 @@ form label {
     border: none;
     border-radius: 5px;
     font-size: 17px;
+    outline: none;
 }
 
 /* special case tooltips */
