@@ -281,6 +281,10 @@ header {
     opacity: 1;
 }
 
+.green {
+    background-color: rgba(41, 77, 34, 0.8);
+}
+
 .case {
     position: relative;
     display: inline-block;

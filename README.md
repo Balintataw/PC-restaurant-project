@@ -20,6 +20,8 @@
 * <del>add images for every dish</del>
 * special case tooltips only appear if an exception is required / nothing appears otherwise and only appearing correctly on specials (first) section
 * make carousel pausable or stop on mouse entry
-
+* add a "READ MORE" tab to news section
+* possibly add true ellipsis truncation to news section
+* add click to enlarge by images
   
 

@@ -2,12 +2,12 @@ $(document).ready(function() {
 
     // carousel 
     $(function(){   
-    $('.fadein img:gt(0)').hide();
-    setInterval(function(){
-      $('.fadein :first-child').fadeOut()
-         .next('img').fadeIn()
-         .end().appendTo('.fadein');}, 
-      3000);
+        $('.fadein img:gt(0)').hide();
+        setInterval(function(){
+        $('.fadein :first-child').fadeOut()
+            .next('img').fadeIn()
+            .end().appendTo('.fadein');
+        }, 3000);
     });
 
     // news section
@@ -22,6 +22,8 @@ $(document).ready(function() {
             $(".news").append(news)
     })
 
+    //sets vars for setCase() when creating menu template
+    var fa, al, sp, ve = '';
     
     //gets and sets special data
     $.get("https://json-data.herokuapp.com/restaurant/special/1", function(data) {
@@ -29,6 +31,7 @@ $(document).ready(function() {
             var specialID = data.menu_item_id;
             $.each(menuApiData, function(i, items) {
                 $.each(items, function(j, item) {
+                    setCase(item)
                     if (item.id === specialID) {
                         var special = `
                         <span class="menu-item-title">${item.item}</span>
@@ -37,21 +40,24 @@ $(document).ready(function() {
                         <div class="special-cases">
                             <div class="special-case-favorite case">
                                 <img src="./resources/favorite.png" class="ico favorite" />
+                                ${fa}
                             </div>
                             <div class="special-case-allergy case">
                                 <img src="./resources/allergy.png" class="ico allergy" />
+                                ${al}
                             </div>
                             <div class="special-case-spicy case">
                                 <img src="./resources/spicy.png" class="ico spicy" />
+                                ${sp}
                             </div>
                             <div class="special-case-vegan case">                        
                                 <img src="./resources/vegan.png" class="ico vegan" />
+                                ${ve}
                             </div>
                         </div>
                         `
                         $(".menu-special").append(special)
                     }
-                    setCase(item)
                 })
             })
         })
@@ -59,6 +65,7 @@ $(document).ready(function() {
     //gets and sets menu items
     $.get("https://json-data.herokuapp.com/restaurant/menu/1", function(data){
         $.each(data.appetizers, function(i,itemObj) {
+            setCase(itemObj);
             var apps = `
                 <span class="menu-item-title">${itemObj.item}</span>
                 <p class="desc">${itemObj.description}</p>
@@ -66,66 +73,77 @@ $(document).ready(function() {
                 <div class="special-cases">
                     <div class="special-case-favorite case">
                         <img src="./resources/favorite.png" class="ico favorite" />
+                        ${fa}
                     </div>
                     <div class="special-case-allergy case">
                         <img src="./resources/allergy.png" class="ico allergy" />
+                        ${al}
                     </div>
                     <div class="special-case-spicy case">
                         <img src="./resources/spicy.png" class="ico spicy" />
+                        ${sp}
                     </div>
                     <div class="special-case-vegan case">                        
                         <img src="./resources/vegan.png" class="ico vegan" />
+                        ${ve}
                     </div>
                 </div>
                 `
         $(".menu-apps").append(apps)
-        setCase(itemObj);
         })
         $.each(data.entrees, function(i,itemObj) {
-            var apps = `
+            setCase(itemObj);
+            var apps1 = `
                 <span class="menu-item-title">${itemObj.item}</span>
                 <p class="desc">${itemObj.description}</p>
                 <span class="price">${itemObj.price}</span>
                 <div class="special-cases">
                     <div class="special-case-favorite case">
                         <img src="./resources/favorite.png" class="ico favorite" />
+                        ${fa}
                     </div>
                     <div class="special-case-allergy case">
                         <img src="./resources/allergy.png" class="ico allergy" />
+                        ${al}
                     </div>
                     <div class="special-case-spicy case">
                         <img src="./resources/spicy.png" class="ico spicy" />
+                        ${sp}
                     </div>
                     <div class="special-case-vegan case">                        
                         <img src="./resources/vegan.png" class="ico vegan" />
+                        ${ve}
                     </div>
                 </div>
                 `
-        $(".menu-entrees").append(apps)
-        setCase(itemObj);
+        $(".menu-entrees").append(apps1)
         })
         $.each(data.sides, function(i,itemObj) {
-            var apps = `
+            setCase(itemObj);
+            var apps2 = `
                 <span class="menu-item-title">${itemObj.item}</span>
                 <p class="desc">${itemObj.description}</p>
                 <span class="price">${itemObj.price}</span>
                 <div class="special-cases">
                     <div class="special-case-favorite case">
                         <img src="./resources/favorite.png" class="ico favorite" />
+                        ${fa}
                     </div>
                     <div class="special-case-allergy case">
                         <img src="./resources/allergy.png" class="ico allergy" />
+                        ${al}
                     </div>
                     <div class="special-case-spicy case">
                         <img src="./resources/spicy.png" class="ico spicy" />
+                        ${sp}
                     </div>
                     <div class="special-case-vegan case">                        
                         <img src="./resources/vegan.png" class="ico vegan" />
+                        ${ve}
                     </div>
                 </div>
                 `
-        $(".menu-sides").append(apps)
-        setCase(itemObj);
+        $(".menu-sides").append(apps2)
         })
     });
 
@@ -167,17 +185,11 @@ $(document).ready(function() {
 
     //sets special case tool tips
     function setCase(item) {
-        var fa, al, sp, ve = '';
         //if item has a special case then add correct tooltip
-        if(item.favorite === 1) {fa = `<span class="ico-tip-text">Kevins' favorite</span>`} 
-        if(item.allergies === 1) {al = `<span class="ico-tip-text">May contain allergens</span>`} 
-        if(item.spicy === 1) {sp = `<span class="ico-tip-text">Can be spicy</span>`} 
-        if(item.vegan === 1) {ve = `<span class="ico-tip-text">Vegan item</span>`} 
-
-        $(".special-case-favorite").append(fa)
-        $(".special-case-allergy").append(al)
-        $(".special-case-spicy").append(sp)
-        $(".special-case-vegan").append(ve)
+        if(item.favorite === 1) {fa = `<span class="ico-tip-text green">Kevins' favorite</span>`} else {fa = `<span class="ico-tip-text">Terrible item</span>`}
+        if(item.allergies === 1) {al = `<span class="ico-tip-text green">May contain allergens</span>`} else {al = `<span class="ico-tip-text">Contains no known allergens</span>`}
+        if(item.spicy === 1) {sp = `<span class="ico-tip-text green">Can be made spicy</span>`} else {sp = `<span class="ico-tip-text">Is not spicy</span>`}
+        if(item.vegan === 1) {ve = `<span class="ico-tip-text green">Vegan item</span>`} else {ve = `<span class="ico-tip-text">Non vegan item</span>`}
     }
 
     //zooms image on click/hover 
