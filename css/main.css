@@ -302,7 +302,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    padding: 20px;
+    padding: 20px 60px;
     border-top: 3px solid rgb(177, 3, 3);
 }
 
