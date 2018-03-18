@@ -156,7 +156,7 @@ header {
 .tabs-container {
     display: flex;
     flex-direction: column;
-    min-height: 600px;
+    /* min-height: 600px; */
 }
 
 .menu-title-header {
@@ -189,7 +189,7 @@ header {
     background-color: rgba(192, 192, 192, 0.3);
     justify-content: space-around;
     padding: 30px 0;
-    min-height: 600px;
+    /* min-height: 600px; */
 }
 
 .allergy, .favorite, .spicy, .vegan {
