@@ -231,13 +231,14 @@ header {
 .price {
     color: silver;
     padding: 15px;
+    font-weight: bold;
 }
 
 .food-image, .food-image-right {
     height: 100px;
     width: 100px;
     padding: 5px;
-    /* border-radius: 5px; */
+    border-radius: 15px;
     cursor: pointer;
 }
 
@@ -294,6 +295,19 @@ header {
 .case:hover .ico-tip-text {
     visibility: visible;
     opacity: 1;
+}
+
+div.enlarge {
+    text-align: right;
+    background-color: rgba(192, 192, 192, 0.3);
+    /* background: linear-gradient(to right, black , grey); */
+}
+
+.enlarge div {
+    margin-right: 8%;
+    font-size: 12px;
+    color: black;
+    margin-bottom: 20px;
 }
 
 /*footer stuff*/
